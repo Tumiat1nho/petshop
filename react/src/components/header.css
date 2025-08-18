@@ -1,0 +1,93 @@
+/* --- Header isolado (não conflita com seu index.css) --- */
+
+:root {
+  --brand: #2e7d32;
+  --brand-weak: #eaf6ec;
+  --ink: #374151;
+  --ink-weak: #6b7280;
+  --surface: #ffffff;
+  --shadow: 0 4px 14px rgba(0, 0, 0, .06);
+}
+
+/* Barra fixa no topo */
+.topnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+}
+
+/* Container centralizado */
+.topnav__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 64px;
+  padding: 0 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+}
+
+/* Link do menu */
+.topnav__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: transform .12s ease, background-color .12s ease, color .12s ease;
+}
+
+/* Ícone perfeitamente centralizado no “botão redondinho” */
+.topnav__icon {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  border: 1.5px solid #e5e7eb;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Hover e foco */
+.topnav__item:hover {
+  background: #f8fafc;
+  transform: translateY(-1px);
+}
+
+/* Estado ativo (rota atual) */
+.topnav__item.active,
+.topnav__item[aria-current="page"] {
+  color: var(--brand);
+  background: var(--brand-weak);
+}
+.topnav__item.active .topnav__icon,
+.topnav__item[aria-current="page"] .topnav__icon {
+  border-color: var(--brand);
+  background: #fff;
+}
+
+/* Empurra o conteúdo para baixo do header fixo */
+.topnav__spacer {
+  height: 72px; /* = altura do header + folga */
+}
+
+/* Responsivo: aproxima itens em telas pequenas */
+@media (max-width: 640px) {
+  .topnav__inner {
+    gap: 18px;
+  }
+  .topnav__label {
+    font-size: 14px;
+  }
+}

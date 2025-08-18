@@ -1,0 +1,67 @@
+/* react/src/pages/consultor.css */
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+}
+
+.page__title {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 10px 0 18px;
+  color: #0f172a;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eef0f3;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(10, 12, 16, .04);
+}
+
+.card__header {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eef0f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+  color: #111827;
+}
+
+.card__body {
+  padding: 14px 16px;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #eef0f3;
+  text-align: left;
+}
+
+.table thead th {
+  background: #f8fafc;
+  font-weight: 700;
+  color: #111827;
+}

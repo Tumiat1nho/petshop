@@ -1,18 +1,22 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Clientes from "./Clientes";
+// react/src/App.jsx
+import { Routes, Route } from "react-router-dom";
+import Topbar from "./components/Topbar";
+import Home from "./pages/Inicio";
+import Caixa from "./pages/Caixa";
+import Agenda from "./pages/Agenda";
+import Consultor from "./pages/Consultor";
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <nav style={{ padding: "10px", background: "#eee" }}>
-        <Link to="/clientes">Clientes</Link>
-      </nav>
+    <>
+      <Topbar />
       <Routes>
-        <Route path="/clientes" element={<Clientes />} />
-        <Route path="/" element={<h1>Bem-vindo ao sistema</h1>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/caixa" element={<Caixa />} />
+        <Route path="/agenda" element={<Agenda />} />
+        <Route path="/consultor" element={<Consultor />} />
+        <Route path="*" element={<Home />} />
       </Routes>
-    </Router>
+    </>
   );
 }
-
-export default App;

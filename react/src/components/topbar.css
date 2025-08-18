@@ -1,0 +1,44 @@
+/* react/src/components/topbar.css */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #fff;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.topbar__nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  justify-content: center;
+}
+
+.topbar__link {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: #1f2937;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: background .15s ease, color .15s ease;
+}
+
+.topbar__link:hover {
+  background: #f5f7fb;
+}
+
+.topbar__link.active {
+  color: #2563eb; /* azul ativo */
+  background: #eef4ff;
+}
+
+.topbar__link span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+}
